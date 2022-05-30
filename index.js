@@ -37,7 +37,9 @@ window.addEventListener("load", function () {
                 player1 = true
             }
         }
-        checkResult();
+        setTimeout(()=>{
+            checkResult();
+        }, 500)
     }
     
     function playBox2() {
@@ -58,8 +60,10 @@ window.addEventListener("load", function () {
                 box2.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     
     function playBox3() {
@@ -80,8 +84,10 @@ window.addEventListener("load", function () {
                 box3.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     
     function playBox4() {
@@ -102,8 +108,10 @@ window.addEventListener("load", function () {
                 box4.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     
     function playBox5() {
@@ -124,8 +132,10 @@ window.addEventListener("load", function () {
                 box5.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     
     function playBox6() {
@@ -146,8 +156,10 @@ window.addEventListener("load", function () {
                 box6.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     
     function playBox7() {
@@ -168,8 +180,10 @@ window.addEventListener("load", function () {
                 box7.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     
     function playBox8() {
@@ -190,8 +204,10 @@ window.addEventListener("load", function () {
                 box8.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
 
     function playBox9() {
@@ -212,8 +228,10 @@ window.addEventListener("load", function () {
                 box9.innerHTML = "O"
                 player1 = true
             }
-        } 
-        checkResult();
+        }
+        setTimeout(()=>{
+            checkResult();
+        }, 500) 
     }
     function checkResult() {
         if((box1.innerHTML=="X" && box2.innerHTML=="X" && box3.innerHTML=="X") || (box4.innerHTML == "X" && box5.innerHTML == "X" && box6.innerHTML == "X") || (box7.innerHTML == "X" && box8.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box5.innerHTML == "X" && box9.innerHTML == "X") || (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X") || (box1.innerHTML == "X" && box4.innerHTML == "X" && box7.innerHTML == "X") || (box2.innerHTML == "X" && box5.innerHTML == "X" && box8.innerHTML == "X") || (box3.innerHTML == "X" && box6.innerHTML == "X" && box9.innerHTML == "X")){
@@ -243,6 +261,20 @@ window.addEventListener("load", function () {
                 box9.innerHTML = null;
                 player1 = true;
             }
-        }        
+        }
+        else if((box1.innerHTML == "X" || box1.innerHTML == "O") && (box2.innerHTML == "X" || box2.innerHTML == "O") && (box3.innerHTML == "X" || box3.innerHTML == "O") && (box4.innerHTML == "X" || box4.innerHTML == "O") && (box5.innerHTML == "X" || box5.innerHTML == "O") && (box6.innerHTML == "X" || box6.innerHTML == "O") && (box7.innerHTML == "X" || box7.innerHTML == "O") && (box8.innerHTML == "X" || box8.innerHTML == "O") && (box9.innerHTML == "X" || box9.innerHTML == "O")){
+            if(confirm("It's draw, Let's play again")){
+                box1.innerHTML = null;
+                box2.innerHTML = null;
+                box3.innerHTML = null;
+                box4.innerHTML = null;
+                box5.innerHTML = null;
+                box6.innerHTML = null;
+                box7.innerHTML = null;
+                box8.innerHTML = null;
+                box9.innerHTML = null;
+                player1 = true;
+            }
+        }     
     }
 })
